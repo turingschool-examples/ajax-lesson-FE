@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Controls = ({ qty, setQty, getJokes }) => {
+const Controls = ({ qty, setQty, getTrivia }) => {
 
   return (
     <div className='controls'>
@@ -8,7 +8,7 @@ const Controls = ({ qty, setQty, getJokes }) => {
              placeholder={qty}
              onChange={(e) => setQty(e.target.value)}/>
 
-      <button onClick={getJokes}>Get Jokes</button>
+      <button onClick={getTrivia}>Get Trivia</button>
     </div>
   )
 }

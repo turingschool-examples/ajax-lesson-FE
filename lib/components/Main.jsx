@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
-import JokeList from './JokeList';
+import TriviaList from './TriviaList';
 import Controls from './Controls';
 
 export default class Main extends Component {
   constructor() {
     super()
     this.state = {
-      jokes: [],
+      triviaArray: [],
       qty: 10,
     }
   }
@@ -17,19 +17,19 @@ export default class Main extends Component {
     //add some codes
   }
 
-  getJokes() {
+  getTrivia() {
     //add some codes
   }
 
   render() {
-    let { qty, jokes, showJokes } = this.state;
+    let { qty, triviaArray } = this.state;
     return (
       <div>
-        <h1>JOKES!</h1>
+        <h1>TRIVIA!</h1>
         <Controls qty={qty}
                   setQty={this.setQty.bind(this)}
-                  getJokes={this.getJokes.bind(this)}/>
-        <JokeList jokes={jokes} showJokes={showJokes}/>
+                  getTrivia={this.getTrivia.bind(this)}/>
+        <TriviaList trivia={triviaArray}/>
       </div>
     )
   }
