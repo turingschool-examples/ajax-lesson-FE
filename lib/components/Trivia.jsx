@@ -1,13 +1,13 @@
 import React from 'react';
 
-const Trivia = ({ trivia }) => {
+const Trivia = ({ factoid }) => {
   return (
     <li>
       <div>
-        Question: {trivia.question}
+        Question: {factoid.question}
       </div>
       <div>
-        Answer: {trivia.correct_answer}
+        Answer: {factoid.correct_answer}
       </div>
     </li>
   )

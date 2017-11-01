@@ -29,7 +29,7 @@ export default class Main extends Component {
         <Controls qty={qty}
                   setQty={this.setQty.bind(this)}
                   getTrivia={this.getTrivia.bind(this)}/>
-        <TriviaList trivia={triviaArray}/>
+        <TriviaList triviaArray={triviaArray}/>
       </div>
     )
   }
