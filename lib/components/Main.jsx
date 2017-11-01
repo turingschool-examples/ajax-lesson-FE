@@ -1,47 +1,35 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
-import JokeList from './JokeList';
+import TriviaList from './TriviaList';
 import Controls from './Controls';
 
 export default class Main extends Component {
   constructor() {
     super()
     this.state = {
-      jokes: [],
+      triviaArray: [],
       qty: 10,
-      showJokes: false
     }
   }
 
-  componentDidMount() {
-    this.getData()
-  }
-
-  getData() {
-    $.get(`http://api.icndb.com/jokes/random/${this.state.qty}?exclude=[explicit]`, (data) => {
-      this.setState({ jokes: data.value })
-    })
-  }
 
   setQty(qty) {
-    this.setState({ qty: parseInt(qty) })
+    //add some codes
   }
 
-  getJokes() {
-    this.setState({ showJokes: true }, () => {
-      this.getData()
-    })
+  getTrivia() {
+    //add some codes
   }
 
   render() {
-    let { qty, jokes, showJokes } = this.state;
+    let { qty, triviaArray } = this.state;
     return (
       <div>
-        <h1>JOKES!</h1>
+        <h1>TRIVIA!</h1>
         <Controls qty={qty}
                   setQty={this.setQty.bind(this)}
-                  getJokes={this.getJokes.bind(this)} />
-        <JokeList jokes={jokes} showJokes={showJokes}/>
+                  getTrivia={this.getTrivia.bind(this)}/>
+        <TriviaList triviaArray={triviaArray}/>
       </div>
     )
   }
