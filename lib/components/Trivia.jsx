@@ -3,12 +3,12 @@ import React from 'react';
 const Trivia = ({ factoid }) => {
   return (
     <li>
-      <div>
+      <h2>
         Question: {factoid.question}
-      </div>
-      <div>
+      </h2>
+      <h3>
         Answer: {factoid.correct_answer}
-      </div>
+      </h3>
     </li>
   )
 }

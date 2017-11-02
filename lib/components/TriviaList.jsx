@@ -11,7 +11,19 @@ const TriviaList = ({ triviaArray }) => {
   return (
     <div>
       <ul>
-        {/* need some trivia here! */}
+        {
+          // triviaArray.map((factoid) => {
+          //   return (
+          //     <li>
+          //       <h2>{factoid.question}</h2>
+          //       <h3>{factoid.correct_answer}</h3>
+          //     </li>
+          //   )
+          // })
+          triviaArray.map((triviaObj) => {
+            return <Trivia factoid={triviaObj} />
+          })
+        }
       </ul>
     </div>
   )
