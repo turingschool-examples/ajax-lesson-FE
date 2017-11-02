@@ -28,12 +28,13 @@ export default class Main extends Component {
 
     fetch('https://opentdb.com/api.php?amount=10&category=27&type=multiple')
     .then( (response) => response.json() )
-    .then( (data) => this.setState({ triviaArray: data.results }) )
+    .then( (data) => this.setState({ triviaArray: data.results }, () => console.log('State has been set! ', this.state)) )
     .catch( (error) => console.log('Error retreiving trivia: ', error) )
   }
 
   render() {
     let { qty, triviaArray } = this.state;
+
     return (
       <div>
         <h1>TRIVIA!</h1>
